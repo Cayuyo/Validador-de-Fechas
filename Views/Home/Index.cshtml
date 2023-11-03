@@ -1,0 +1,33 @@
+﻿@model Validador_de_Fechas.Models.DateModel
+@{
+    ViewData["Title"] = "Date Validator";
+}
+
+<!DOCTYPE html>
+<html lang='es-CL'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Index by Cayuyo</title>
+
+    <link rel='stylesheet' href='~/css/site.css'>
+</head>
+
+<body>
+    <div class='wrap'>
+        <div class="text-center">
+            <h1>Date Form: </h1>
+            <form asp-controller="Home" asp-action="Submit" method="post">
+                <div class="form-group">
+                    <label asp-for="Date"></label>
+                    <input asp-for="Date" class="form-control" />
+                    <span asp-validation-for="Date" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn1">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
